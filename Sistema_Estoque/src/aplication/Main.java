@@ -10,9 +10,9 @@ import java.util.Scanner;
 
 public class Main {
 	
-	private static final String URL = "jdbc:postgresql://localhost:5432/Projeto_vendas";
+	private static final String URL = "jdbc:postgresql://localhost:5432/<nome da database>";
 	private static final String USER = "postgres";
-	private static final String PASSWORD = "postgres123";
+	private static final String PASSWORD = "****";
 
 	public static void main(String[] args) {
 		try(Connection connection = DriverManager.getConnection(URL, USER, PASSWORD)){
