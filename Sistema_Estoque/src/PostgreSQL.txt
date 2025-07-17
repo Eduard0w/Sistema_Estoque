@@ -1,0 +1,31 @@
+drop table if exists estoque;
+drop table if exists produto;
+
+create table produto (
+	id bigint primary key generated always as identity,
+	nome character varying(200) not null unique,
+	preco numeric not null
+);
+
+create table estoque (
+	id bigint primary key generated always as identity,
+	produto_id bigint references produto(id),
+	qnt_produto int
+);
+
+-- INSERT INTO produto (nome, preco) VALUES ('dipirona', 10.00);
+-- INSERT INTO estoque (produto_id, qnt_produto) VALUES (1, 10);
+
+
+select * from produto;
+select * from estoque;
+
+/* 
+SELECT p.nome, e.qnt_produto
+FROM produto p
+JOIN estoque e ON e.produto_id = p.id;
+
+Eu quero juntar (JOIN) a tabela estoque (apelidada como e) com a tabela produto 
+(p), onde a coluna produto_id da tabela estoque for igual à coluna id da tabela 
+produto.
+*/
