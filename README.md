@@ -1,4 +1,4 @@
 # Sistema_Estoque
 
 
-Sistema com o intuito de estudo, afim de resolver um problema que vi em uma farmacia.
+Sistema com o intuito de estudar e colocar conhecimento em prática
